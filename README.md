@@ -73,17 +73,26 @@ curl -fsSL https://raw.githubusercontent.com/pekka-lab/deep-audit/main/install.s
 
 **Run specific phases:**
 ```
-/deep-audit bugs           # Phase 1: fix broken things
-/deep-audit smell           # Phase 2: remove AI patterns
-/deep-audit ui              # Phase 4: redesign the UI
-/deep-audit buttons         # Phase 5: test every interactive element
-/deep-audit security        # Phase 10: check data isolation
+/deep-audit inventory       # Phase 0:  map every page, route, API
+/deep-audit bugs            # Phase 1:  fix broken functionality
+/deep-audit smell           # Phase 2:  remove AI patterns from code + UI
+/deep-audit flow            # Phase 3:  optimize UX flows, reduce clicks
+/deep-audit ui              # Phase 4:  taste discovery + UI redesign
+/deep-audit buttons         # Phase 5:  test every button, form, endpoint
+/deep-audit a11y            # Phase 6:  accessibility audit
+/deep-audit seo             # Phase 7:  SEO, meta tags, social cards
+/deep-audit resilience      # Phase 8:  error handling, validation
+/deep-audit prod            # Phase 9:  performance, images, responsive
+/deep-audit security        # Phase 10: data isolation between users
+/deep-audit integrations    # Phase 11: Stripe, OAuth, email, webhooks
+/deep-audit consistency     # Phase 12: terminology, copy tone, deploy checklist
 ```
 
 **Combine phases:**
 ```
 /deep-audit smell flow      # Clean up AI patterns, then optimize UX
 /deep-audit a11y seo        # Accessibility + SEO pass
+/deep-audit security prod   # Security + production readiness
 ```
 
 When run without arguments, you get an interactive menu to pick what to audit.
